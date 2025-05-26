@@ -1,0 +1,73 @@
+body {
+  background-image: url("../assets/default_background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@font-face {
+  font-family: poppinbold;
+  src: url(../Fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: poppinRegular;
+  src: url(../Fonts/Poppins/Poppins-Regular.ttf);
+}
+
+.btn-custom {
+  background-color: #493a96;
+  color: white;
+  padding: 5px 30px;
+  border-radius: 16px;
+  font-weight: 600;
+  margin-top: 60px ;
+  margin-block: 20px;
+}
+
+.image .butterfly-img {
+  width: auto;
+}
+.btn-custom:hover {
+  background-color: #493a96;
+  color: white;
+}
+.shine-text {
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+
+  color: #493a96;
+  line-height: normal;
+}
+.make-visible {
+  color: #493a96;
+  font-family: Alexandria;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (min-width: 768px) {
+  .btn-custom {
+    margin-top: 60px;
+  }
+}
+.references{
+color: #000;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+ margin-top: 40px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+
+.references a {
+  color: black !important;
+  text-decoration: underline;
+}
