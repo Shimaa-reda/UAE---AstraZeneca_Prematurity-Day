@@ -256,3 +256,32 @@ input[type="radio"]:checked {
 @media (min-width: 1200px) {
   /* Add styles for large screens if needed */
 }
+
+
+
+/* .form-check-label {
+    white-space: pre-line; 
+    position: relative;
+    padding-left: 20px; 
+}
+
+.form-check-label::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #493A96;
+    border-radius: 50%;
+    position: absolute; 
+    left: 0; 
+    top: 25%; 
+  
+} */
+/* //////////////// */
+ul li {
+ 
+text-indent: -1.4em;
+margin-left: 70px;
+
+  
+}

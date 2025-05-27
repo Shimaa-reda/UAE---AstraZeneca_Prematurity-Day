@@ -36,7 +36,7 @@ const questions = [
   {
     question: "What are the types of lupus?",
     options: [
-      "Systemic lupus erythematosus (SLE), cutaneous lupus, drug-induced lupus, neonatal lupus.<sup>2</sup>",
+      "Systemic lupus erythematosus (SLE), cutaneous lupus, drug-induced lupus,neonatal lupus.<sup>2</sup>",
       "Systemic lupus erythematosus (SLE), cutaneous lupus.",
       "Systemic lupus erythematosus (SLE), cutaneous lupus, drug-induced lupus.",
       "Systemic lupus erythematosus (SLE), cutaneous lupus, neonatal lupus.",
@@ -198,29 +198,36 @@ function displayQuestion() {
   // Clear previous options
   optionContainer.innerHTML = "";
 
-  // Create and append new options
+  // Create a list element
+  const optionList = document.createElement("ul");
+  optionList.className = "list-unstyled"; // Bootstrap class to remove default padding
+
+  // Create and append list items
   for (let i = 0; i < currentQuestion.options.length; i++) {
-    const optionLabel = document.createElement("label");
-    optionLabel.className = "form-check-label";
-    optionLabel.setAttribute("for", `answer${i + 1}`);
-    // optionLabel.textContent = currentQuestion.options[i];
-    optionLabel.innerHTML = currentQuestion.options[i];
+    const listItem = document.createElement("li");
+    listItem.className = "mb-3 "; 
 
     const optionInput = document.createElement("input");
-    optionInput.className = "form-check-input";
+    optionInput.className = "form-check-input me-2 .........................";
     optionInput.type = "radio";
     optionInput.name = "answer";
     optionInput.id = `answer${i + 1}`;
     optionInput.value = i;
 
-    const optionDiv = document.createElement("div");
-    optionDiv.className = "form-check";
-    optionDiv.appendChild(optionInput);
-    optionDiv.appendChild(optionLabel);
+    const optionLabel = document.createElement("label");
+    optionLabel.className = "form-check-label";
+    optionLabel.setAttribute("for", `answer${i + 1}`);
+    optionLabel.innerHTML = currentQuestion.options[i];
 
-    optionContainer.appendChild(optionDiv);
+    listItem.appendChild(optionInput);
+    listItem.appendChild(optionLabel);
+
+    optionList.appendChild(listItem);
   }
+
+  optionContainer.appendChild(optionList);
 }
+
 
 // Check if the user's answer is correct
 function checkAnswer() {
